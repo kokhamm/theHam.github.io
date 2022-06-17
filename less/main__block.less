@@ -1,0 +1,106 @@
+// main: ../css/master.less
+
+.main{
+   position: relative;
+   z-index: 1;
+   background-image: url(../img/main_bg.jpg);
+   // opacity: 0.9;
+   background-size: cover;
+   background-position: center;
+   // height: 100vh;
+   &__cover{
+      background: rgb(180, 180, 180);
+      position: absolute;
+      opacity: 0.2;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+   }
+   &__block{
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__intruduction{
+      text-align: center;
+      padding-top: 7rem;
+   }
+   &__top-header{
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 35px;
+      color: #FFFFFF;
+      &-w{
+         color: #18CFAB;
+      }
+   }
+   &__mid-header{
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 79px;
+      line-height: 8.5rem;
+      padding-top: 1rem;
+      color: #FFFFFF;
+   }
+   &__bottom-header{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 34px;
+      color: #a3a3a3;
+   }
+   &__buttons{
+      display: flex;
+   }
+   &__btn-explore{
+      &:hover{
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+         opacity: 0.95;
+      }
+      margin: 10rem 2rem 0 0;
+      width: 166px;
+      height: 61px;
+      background: #18CFAB;
+      border: none;
+      border-top: 3px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      &-text{
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 800;
+         font-size: 12px;
+         text-transform: uppercase;
+         color: white;
+      }
+   }
+   &__btn-purchase{
+      &:hover{
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+         opacity: 0.95;
+      }
+      margin: 10rem 0 0 2rem;
+      width: 166px;
+      height: 61px;
+      background: #00CBF6;
+      border: none;
+      border-top: 3px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      &-text{
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 800;
+         font-size: 12px;
+         text-transform: uppercase;
+         color: white;
+      }
+   }
+}
