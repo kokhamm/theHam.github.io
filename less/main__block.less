@@ -1,8 +1,10 @@
 // main: ../css/master.less
 
+
 .main{
+   overflow: hidden;
    position: relative;
-   z-index: 1;
+   z-index: 1;  
    background-image: url(../img/main_bg.jpg);
    // opacity: 0.9;
    background-size: cover;
@@ -35,6 +37,10 @@
       font-weight: bold;
       font-size: 35px;
       color: #FFFFFF;
+      opacity: 0;
+      -webkit-transition: all 0.8s;
+         -moz-transition: all 0.8s;
+         transition: all 0.8s;
       &-w{
          color: #18CFAB;
       }
@@ -47,15 +53,27 @@
       line-height: 8.5rem;
       padding-top: 1rem;
       color: #FFFFFF;
+      opacity: 0;
+      -webkit-transition: all 0.8s;
+         -moz-transition: all 0.8s;
+         transition: all 0.8s;
    }
    &__bottom-header{
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
       font-size: 34px;
       color: #a3a3a3;
+      opacity: 0;
+      -webkit-transition: all 0.8s;
+         -moz-transition: all 0.8s;
+         transition: all 0.8s;
    }
    &__buttons{
       display: flex;
+      opacity: 0;
+      -webkit-transition: all 0.8s;
+         -moz-transition: all 0.8s;
+         transition: all 0.8s;
    }
    &__btn-explore{
       &:hover{
@@ -70,7 +88,7 @@
       border-top: 3px solid white;
       border-radius: 5px;
       cursor: pointer;
-      -webkit-transition-duration: 0.4s; /* Safari */
+      -webkit-transition-duration: 0.9s; /* Safari */
       transition-duration: 0.4s;
       &-text{
          font-family: 'Montserrat', sans-serif;
@@ -78,6 +96,8 @@
          font-size: 12px;
          text-transform: uppercase;
          color: white;
+         padding: 22px;
+         text-decoration: none;
       }
    }
    &__btn-purchase{
@@ -101,6 +121,14 @@
          font-size: 12px;
          text-transform: uppercase;
          color: white;
+         padding: 22px;
+         text-decoration: none;
       }
    }
+}
+
+
+// for afterLoad
+.show-main {
+   opacity: 1;
 }

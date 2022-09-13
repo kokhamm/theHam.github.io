@@ -35,6 +35,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  position: relative;
+  
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -76,3 +78,4 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* Removing yellow background with autofill*/

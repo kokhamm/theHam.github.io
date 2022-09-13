@@ -9,28 +9,79 @@
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
     <link rel="stylesheet" href="css/master.css">
 </head>
-<body>
-    <section class="main"> 
+<body id="body">
+    <div class="promotion__form-popup" id="promoFormPopup">
+        <div class="promotion__form-container">
+            <div id="promoForm" class="promotion__pop-up">
+                <div class="promotion__header-block">
+                    <p class="promotion__form-header">Edit payment method</p>
+                    <div id="formClose" class="promotion__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.90158 8.00004L15.6062 2.29544C16.1313 1.77033 16.1313 0.918951 15.6062 0.393911C15.0811 -0.131204 14.2297 -0.131204 13.7046 0.393911L7.99997 6.09858L2.29531 0.393836C1.77019 -0.131279 0.918893 -0.131279 0.393779 0.393836C-0.13126 0.918951 -0.13126 1.77033 0.393779 2.29537L6.09844 7.99996L0.393779 13.7046C-0.13126 14.2297 -0.13126 15.0811 0.393779 15.6062C0.918893 16.1313 1.77019 16.1313 2.29531 15.6062L7.99997 9.90149L13.7046 15.6062C14.2297 16.1313 15.0811 16.1313 15.6062 15.6062C16.1313 15.081 16.1313 14.2297 15.6062 13.7046L9.90158 8.00004Z"
+                                fill="currentcolor" />
+                        </svg>
+                    </div>
+                </div>
+                <form class="promotion__form" action="" name="promotionForm" id="promotionForm">
+                    <div class="promotion__form-block">
+                        <label for="promInputHolder" class="promotion__label">Card holder*</label>
+                        <input class="promotion__input" id="promInputHolder" placeholder="Mark Zuckerberg" type="text" name="cardHolder">
+                    </div>
+                    <div class="promotion__form-block">
+                        <label for="promInputNumber" class="promotion__label">Credit/debit card number*</label>
+                        <input class="promotion__input" id="promInputNumber" placeholder="---- ---- ---- ----" type="tel" name="cardNumber">
+                        <div class="promotion__card" id="promoVisa"><img src="img/Visa.svg" alt="visa"></div>
+                        <div class="promotion__card" id="promoMastercard"><img src="img/Master-card.svg" alt="Master-card"></div>
+                    </div>
+                    <div class="promotion__double-block">
+                        <div class="promotion__left">
+                            <label for="promInputValid" class="promotion__label">Expiration month and year*</label>
+                            <input class="promotion__input" id="promInputValid" placeholder="MM/YY" type="text" name="validTo">
+                        </div>
+                        <div class="promotion__right">
+                            <label for="promInputCvv" class="promotion__label">CVV*</label>
+                            <input class="promotion__input" id="promInputCvv" placeholder="---" type="text" name="cvv">
+                        </div>
+                    </div>
+                    <div class="promotion__form-block">
+                        <p class="promotion__price">Pricing: 149$</p>
+                    </div>
+                    <div class="promotion__bottom">
+                        <div class="promotion__form-mandatory-block">
+                            <span class="promotion__mandatory">*This field is required</span>
+                        </div>
+                        <div class="promotion__form-buttons">
+                            <button id="formCancel" type="button" class="promotion__button-cancel">cancel</button>
+                            <button class="promotion__button"><span class="promotion__button-buy">purchase</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="main__header">
+        <div class="container">
+            <div class="main__header-wrap">
+                <div class="main__header-logo">
+                    <img src="img/logo.svg" alt="logo">
+                </div>
+                <nav class="main__header-nav" id="nav">
+                    <a class="main__nav-link" href="#main">home</a>
+                    <a class="main__nav-link" href="#services">service</a>
+                    <a class="main__nav-link" href="#promotion">buy</a>
+                    <a class="main__nav-link" href="#portfolio">our works</a>
+                    <a class="main__nav-link" href="#feedback">feedback</a>
+                    <a class="main__nav-link" href="#connect">contact</a> 
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="main" id="main"> 
         <div class="main__cover"></div>
         <div class="container">
             <div class="main__wrap">
-                <header class="main__header">
-                    <div class="container">
-                        <div class="main__header-wrap">
-                            <div class="main__header-logo">
-                                <img src="img/logo.svg" alt="logo">
-                            </div>
-                            <nav class="main__header-nav" id="nav">
-                                <a class="main__nav-link" href="#">home</a>
-                                <a class="main__nav-link" href="#services">service</a>
-                                <a class="main__nav-link" href="#promotion">buy</a>
-                                <a class="main__nav-link" href="#portfolio">our works</a>
-                                <a class="main__nav-link" href="#feedback">feedback</a>
-                                <a class="main__nav-link" href="#connect">contact</a>
-                            </nav>
-                        </div>
-                    </div>
-                </header>
+                
                 <div class="main__block">
                     <div class="main__intruduction">
                         <h2 class="main__top-header">
@@ -43,12 +94,12 @@
                             Just Buy And Enjoy These Awesome Features
                         </h2>
                     </div>
-                    <div class="main__buttons">
+                    <div class="main__buttons" id="mainButtons">
                         <button class="main__btn-explore">
-                            <p class="main__btn-explore-text">explore now</p>
+                            <a class="main__btn-explore-text" href="#services">explore now</a>
                         </button>
                         <button class="main__btn-purchase">
-                            <p class="main__btn-purchase-text">purchase now</p>
+                            <a class="main__btn-purchase-text" href="#promotion">purchase now</a>
                         </button>
                     </div>
                     
@@ -180,7 +231,7 @@
                 <h2 class="promotion__subheader">
                     Smooth reliable, responsive ready, perfect portfolio, unique blog layout and many many options for you
                 </h2>
-                <button class="promotion__btn">
+                <button id="popupOpen" class="promotion__btn">
                     <p class="promotion__btn-text">purchase now</p>
                 </button>
             </div>
@@ -2703,7 +2754,7 @@
     </section>
     <section class="connect" id="connect">
         <div class="container">
-            <div class="connect__block">
+            <div class="connect__block reveal">
                 <div class="connect__text">
                     <h1 class="connect__header">
                         Need <span class="connect__the">the<span class="connect__ham">Ham</span></span>?<br>Get in touch...
@@ -2712,20 +2763,41 @@
                     see...</p>
                 </div>
                 <div class="connect__form-block">
-                    <form action="#" class="connect__form">
+                    <form action="#" id="theHamForm" class="connect__form">
                         <div class="connect__item">
-                            <input required="!" class="connect__input" type="text" placeholder="Name">
+                            <input class="connect__input __req" name="name" type="text" placeholder="Name">
                         </div>
                         <div class="connect__item">
-                            <input class="connect__input" type="text" placeholder="Phone">
+                            <input class="connect__input" name="phone" type="text" placeholder="Phone">
                         </div>
                         <div class="connect__item">
-                            <input required="!" class="connect__input" type="text" placeholder="E-mail">
+                            <input class="connect__input __req _email" name="eMail" type="text" placeholder="E-mail">
+                        </div>
+                        <div class="connect__item connect__item-checkbox">
+                            <input type="checkbox" checked name="agreement" id="connectCheckboxHidden" class="connect__checkbox-hidden __req">
+                            <label for="connectCheckboxHidden" class="connect__agreement"><span class="connect__agreement-text">I Agree to Privacy Policy</span></span><span class="connect__checkbox-wrap"><span id="connectCheckbox" class="connect__checkbox connect__checkbox-on"></span></label>
+                        </div>
+                        <div class="connect__button-block">
+                            <button class="connect__button">
+                                <svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                    <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+                                    <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50"
+                                        x2="85" y2="50.5">
+                                        <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                                            repeatCount="indefinite" />
+                                    </line>
+                                    <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50"
+                                        x2="49.5" y2="74">
+                                        <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                                            repeatCount="indefinite" />
+                                    </line>
+                                </svg>
+                                <p class="connect__button-text">send massage</p>
+                            </button>
                         </div>
                     </form>
-                    <div class="connect__button-block">
-                        <button class="connect__button"><p class="connect__button-text">send massage</p></button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -2738,12 +2810,18 @@
     </section>
 
   
-<script src="js/services-tabs.js"></script>
-<script src="js/portfolio-tabs.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/services-tabs.js"></script>
+<script src="js/portfolio-tabs.js"></script>
+<script src="js/connect.js"></script>
+<script src="js/main.js"></script>
+<script src="js/promotion.js"></script>
 <script>
     $(document).ready(function () {
             $(".portfolio__card-all").slice(0, 12).show();
@@ -2975,20 +3053,68 @@
         $('.feedback__navigation').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
+            mobileFirst: true,
             asNavFor: '.feedback__slider',
             centerMode: true,
             focusOnSelect: true ,
             prevArrow: '.feedback__prevarrow' ,
-            nextArrow: '.feedback__nextarrow'
+            nextArrow: '.feedback__nextarrow' ,
+            responsive:[
+                {
+                    breakpoint: 895,
+                    setting: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+            
         });
         $(document).ready(function () {
                 $("#nav").on("click", "a", function (event) {
                     event.preventDefault();
                     var id = $(this).attr('href'),
                         top = $(id).offset().top;
-                    $('body,html').animate({ scrollTop: top }, 1300);
+                    $('body,html').animate({ scrollTop: top }, 1700);
                 });
             });
+        $(document).ready(function () {
+                $("#mainButtons").on("click", "a", function (event) {
+                    event.preventDefault();
+                    var id = $(this).attr('href'),
+                        top = $(id).offset().top;
+                    $('body,html').animate({ scrollTop: top }, 1700);
+                });
+            });
+</script>
+<script type="text/javascript">
+
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+    
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add('active');
+            setTimeout(function () {
+                $('.connect__block').removeClass('reveal');
+                window.removeEventListener('scroll', reveal);
+            }, 2000);
+        }
+        else {
+            reveals[i].classList.remove('active');
+            
+        }
+    } 
+}
+
 </script>
 </body>
 </html>

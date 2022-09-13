@@ -2,10 +2,15 @@
 .main{
    &__header{
       background-color: rgba(83, 83, 83, 0.6);
-      position: absolute;
+      position:fixed;
+      top: 0px;
       z-index: 2;
       left: 0;
+      opacity: 0;
       width: 100%;
+      -webkit-transition: all 0.8s;
+         -moz-transition: all 0.8s;
+         transition: all 0.8s;
       &-logo{
          @media(max-width: 1169px){
          width: 25%;
@@ -17,9 +22,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
       @media(max-width: 1169px){
       padding: 1rem 0 1rem 0;
       }
+   }
+   &__header-logo{
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
    }
    &__nav-link{
       font-family: 'Montserrat', sans-serif;
@@ -34,5 +45,16 @@
          margin-right: 2rem;
       }
       
+   }
+}
+// for header thin
+
+.header-thin {
+   background-color: #535353;
+   .main__header-wrap{
+      padding: 0px 0px;
+   }
+   .main__header-logo{
+      scale: 0.7;
    }
 }
