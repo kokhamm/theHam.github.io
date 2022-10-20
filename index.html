@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TheHam</title>
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
     <link rel="stylesheet" href="css/master.css">
@@ -74,8 +74,22 @@
                     <a class="main__nav-link" href="#feedback">feedback</a>
                     <a class="main__nav-link" href="#connect">contact</a> 
                 </nav>
+                <div class="header__button">
+                    <span class="header__midline"></span>
+                </div>
             </div>
         </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li><a href="#main" class="menu__item">Home</a></li>
+                <li><a href="#services" class="menu__item">Service</a></li>
+                <li><a href="#promotion" class="menu__item">Buy</a></li>
+                <li><a href="#portfolio" class="menu__item">Our works</a></li>
+                <li><a href="#feedback" class="menu__item">Feedback</a></li>
+                <li><a href="#connect" class="menu__item">Contact</a></li>
+            </ul>
+            <button class="register"><span class="register__text">register</span></button>
+        </nav>
     </header>
     <section class="main" id="main"> 
         <div class="main__cover"></div>
@@ -3051,7 +3065,7 @@
             asNavFor: '.feedback__navigation'
         });
         $('.feedback__navigation').slick({
-            slidesToShow: 4,
+            slidesToShow: 2,
             slidesToScroll: 1,
             mobileFirst: true,
             asNavFor: '.feedback__slider',
@@ -3061,14 +3075,13 @@
             nextArrow: '.feedback__nextarrow' ,
             responsive:[
                 {
-                    breakpoint: 895,
-                    setting: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-            
+                    breakpoint: 414,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
         });
         $(document).ready(function () {
                 $("#nav").on("click", "a", function (event) {
